@@ -1,0 +1,260 @@
+tools
+"{
+        ""tool_name"": ""generate_code_reviews"",
+        ""tool_description"": ""Generates a list of code reviews based on the changes made in the repository."",
+        ""arguments"": [
+            {""name"": ""repository"", ""description"": ""The name of the repository for which code reviews are generated"", ""type"": ""string""},
+            {""name"": ""since_date"", ""description"": ""Filters code reviews based on changes made since this date"", ""type"": ""date""},
+            {""name"": ""reviewers"", ""description"": ""List of developers assigned to review the code"", ""type"": ""array of strings""}
+        ]
+    }"
+"{
+        ""tool_name"": ""analyze_customer_feedback"",
+        ""tool_description"": ""Analyzes customer feedback to identify common themes and areas for improvement"",
+        ""arguments"": [
+            {""name"": ""feedback_data"", ""description"": ""List of customer feedback entries to be analyzed"", ""type"": ""array of objects""},
+            {""name"": ""sentiment_threshold"", ""description"": ""Threshold for considering feedback as positive or negative"", ""type"": ""float""},
+            {""name"": ""topic_modeling"", ""description"": ""Apply topic modeling to identify key topics in the feedback"", ""type"": ""boolean""}
+        ]
+    }"
+"{
+        ""tool_name"": ""calculate_code_quality_metrics"",
+        ""tool_description"": ""Calculates various code quality metrics for a given codebase"",
+        ""arguments"": [
+            {""name"": ""codebase_path"", ""description"": ""The path to the codebase for which metrics are calculated"", ""type"": ""string""},
+            {""name"": ""metrics_to_calculate"", ""description"": ""List of specific code quality metrics to be calculated"", ""type"": ""array of strings""},
+            {""name"": ""thresholds"", ""description"": ""Thresholds for determining code health"", ""type"": ""object""}
+        ]
+    }"
+"{
+        ""tool_name"": ""schedule_team_meeting"",
+        ""tool_description"": ""Schedules a team meeting with relevant members based on availability and priorities"",
+        ""arguments"": [
+            {""name"": ""meeting_purpose"", ""description"": ""The purpose or agenda of the team meeting"", ""type"": ""string""},
+            {""name"": ""team_members"", ""description"": ""List of team members who should attend the meeting"", ""type"": ""array of strings""},
+            {""name"": ""preferred_time"", ""description"": ""Preferred time for the meeting"", ""type"": ""time""}
+        ]
+    }"
+"{
+        ""tool_name"": ""notify_deployments"",
+        ""tool_description"": ""Notifies relevant stakeholders about upcoming or completed deployments"",
+        ""arguments"": [
+            {""name"": ""deployment_info"", ""description"": ""Information about the deployment, including version and release notes"", ""type"": ""object""},
+            {""name"": ""notification_list"", ""description"": ""List of stakeholders to be notified"", ""type"": ""array of strings""},
+            {""name"": ""notify_on_completion"", ""description"": ""Flag to determine whether to notify on completion"", ""type"": ""boolean""}
+        ]
+    }"
+"{
+        ""tool_name"": ""resolve_dependencies"",
+        ""tool_description"": ""Resolves and updates dependencies in the project based on the latest available versions"",
+        ""arguments"": [
+            {""name"": ""project_path"", ""description"": ""The path to the project for which dependencies should be resolved"", ""type"": ""string""},
+            {""name"": ""dependency_file"", ""description"": ""The file specifying project dependencies"", ""type"": ""string""},
+            {""name"": ""update_strategy"", ""description"": ""Strategy for updating dependencies (e.g., strict, latest)"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""optimize_database_queries"",
+        ""tool_description"": ""Analyzes and optimizes database queries for better performance"",
+        ""arguments"": [
+            {""name"": ""database_name"", ""description"": ""The name of the database to be optimized"", ""type"": ""string""},
+            {""name"": ""query_analysis_level"", ""description"": ""Level of analysis to be performed on queries (e.g., basic, advanced)"", ""type"": ""string""},
+            {""name"": ""optimize_strategy"", ""description"": ""Strategy for optimizing queries (e.g., index optimization)"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""security_audit_manager"",
+        ""tool_description"": ""Manages and conducts security audits on the codebase"",
+        ""arguments"": [
+            {""name"": ""audit_level"", ""description"": ""Level of the security audit (e.g., basic, comprehensive)"", ""type"": ""string""},
+            {""name"": ""report_format"", ""description"": ""Format for the audit report (e.g., PDF, HTML)"", ""type"": ""string""},
+            {""name"": ""notify_stakeholders"", ""description"": ""Flag to notify stakeholders on audit completion"", ""type"": ""boolean""}
+        ]
+    }"
+"{
+        ""tool_name"": ""backup_and_restore_manager"",
+        ""tool_description"": ""Manages backup and restore processes for critical data"",
+        ""arguments"": [
+            {""name"": ""data_to_backup"", ""description"": ""List of critical data to be included in the backup"", ""type"": ""array of objects""},
+            {""name"": ""backup_schedule"", ""description"": ""Schedule for automated backup execution"", ""type"": ""cron expression""}
+        ]
+    }"
+"{
+        ""tool_name"": ""get_work_item_details"",
+        ""tool_description"": ""Returns the details of a specific work item"",
+        ""arguments"": [
+            {""name"": ""work_id"", ""description"": ""The ID of the work item for which you want to retrieve details"", ""type"": ""string""},
+            {""name"": ""fields"", ""description"": ""The fields to be included in the details"", ""type"": ""an array of strings""},
+            {""name"": ""description"", ""description"": ""Expands the details of the work item"", ""type"": ""boolean""},
+            {""name"": ""revision"", ""description"": ""The revision number of the work item"", ""type"": ""integer(int32)""}
+        ]
+    }"
+"{
+        ""tool_name"": ""generate_work_report"",
+        ""tool_description"": ""Generates a report of work items based on specified criteria"",
+        ""arguments"": [
+            {""name"": ""start_date"", ""description"": ""The start date for the report"", ""type"": ""string""},
+            {""name"": ""end_date"", ""description"": ""The end date for the report"", ""type"": ""string""},
+            {""name"": ""user_id"", ""description"": ""The ID of the user for whom the report is generated"", ""type"": ""string""},
+            {""name"": ""work_type"", ""description"": ""The type of work items to include in the report"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""assign_work_item"",
+        ""tool_description"": ""Assigns a work item to a specific user"",
+        ""arguments"": [
+            {""name"": ""work_id"", ""description"": ""The ID of the work item to be assigned"", ""type"": ""string""},
+            {""name"": ""assignee_id"", ""description"": ""The ID of the user to whom the work item is assigned"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""create_new_sprint"",
+        ""tool_description"": ""Creates a new sprint for managing work items"",
+        ""arguments"": [
+            {""name"": ""sprint_name"", ""description"": ""The name of the new sprint"", ""type"": ""string""},
+            {""name"": ""start_date"", ""description"": ""The start date of the new sprint"", ""type"": ""string""},
+            {""name"": ""end_date"", ""description"": ""The end date of the new sprint"", ""type"": ""string""},
+            {""name"": ""capacity"", ""description"": ""The capacity of the new sprint"", ""type"": ""integer(int32)""}
+        ]
+    }"
+"{
+        ""tool_name"": ""get_work_item_comments"",
+        ""tool_description"": ""Retrieves the comments associated with a specific work item"",
+        ""arguments"": [
+            {""name"": ""work_id"", ""description"": ""The ID of the work item for which you want to retrieve comments"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""get_ticket_comments"",
+        ""tool_description"": ""Returns the comments of a specific ticket"",
+        ""arguments"": [
+            {""name"": ""ticket_id"", ""description"": ""The ID of the ticket for which you want to retrieve comments"", ""type"": ""string""},
+            {""name"": ""from_date"", ""description"": ""The start date for the comments retrieval"", ""type"": ""string""},
+            {""name"": ""to_date"", ""description"": ""The end date for the comments retrieval"", ""type"": ""string""},
+            {""name"": ""limit"", ""description"": ""The maximum number of comments to return"", ""type"": ""integer(int32)""}
+        ]
+    }"
+"{
+        ""tool_name"": ""create_new_work_item"",
+        ""tool_description"": ""Creates a new work item with the specified details"",
+        ""arguments"": [
+            {""name"": ""title"", ""description"": ""The title of the new work item"", ""type"": ""string""},
+            {""name"": ""description"", ""description"": ""The description of the new work item"", ""type"": ""string""},
+            {""name"": ""type"", ""description"": ""The type of the new work item"", ""type"": ""string""},
+            {""name"": ""priority"", ""description"": ""TThe priority of the new work item"", ""type"": ""string""},
+            {""name"": ""assignee_id"", ""description"": ""The ID of the user to whom the work item is assigned"", ""type"": ""string""},
+        ]
+    }"
+"{
+        ""tool_name"": ""get_work_item_history"",
+        ""tool_description"": ""Retrieves the history of changes made to a specific work item"",
+        ""arguments"": [
+            {""name"": ""work_id"", ""description"": ""The ID of the work item for which you want to retrieve history"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""create_new_ticket"",
+        ""tool_description"": ""Creates a new ticket for tracking issues or requests"",
+        ""arguments"": [
+            {""name"": ""title"", ""description"": ""The title of the ticket"", ""type"": ""string""},
+            {""name"": ""description"", ""description"": ""The description of the new ticket"", ""type"": ""string""},
+            {""name"": ""priority"", ""description"": ""TThe priority of the new work item"", ""type"": ""string""},
+            {""name"": ""assignee_id"", ""description"": ""The ID of the user to whom the t is assigned"", ""type"": ""string""},
+        ]
+    }"
+"{
+        ""tool_name"": ""get_ticket_details"",
+        ""tool_description"": ""Returns the details of a specific ticket"",
+        ""arguments"": [
+            {""name"": ""ticket_id"", ""description"": ""The ID of the ticket for which you want to retrieve details"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""generate_release_notes"",
+        ""tool_description"": ""Generates release notes for a given product version"",
+        ""arguments"": [
+            {""name"": ""product_version"", ""description"": ""The version of the product for which to generate release notes"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""estimate_effort_for_work_item"",
+        ""tool_description"": ""Estimates the effort required to complete a given work item"",
+        ""arguments"": [
+            {""name"": ""work_item_id"", ""description"": ""The ID of the work item for which to estimate effort"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""bug_triage_helper"",
+        ""tool_description"": ""Automatically triages reported bugs based on severity and impact."",
+        ""arguments"": [
+            {""name"": ""bug_reports"", ""description"": ""Array of bug report descriptions"", ""type"": ""array of strings""},
+            {""name"": ""priority_levels"", ""description"": ""List of priority levels to classify"", ""type"": ""array of strings""}
+        ]
+    }"
+"{
+        ""tool_name"": ""release_timeline_planner"",
+        ""tool_description"": ""Helps in planning and visualizing product release timelines."",
+        ""arguments"": [
+            {""name"": ""release_items"", ""description"": ""List of items scheduled for release"", ""type"": ""array of strings""},
+            {""name"": ""start_date"", ""description"": ""Start date of the release cycle"", ""type"": ""date""},
+            {""name"": ""end_date"", ""description"": ""End date of the release cycle"", ""type"": ""date""}
+        ]
+    }"
+"{
+        ""tool_name"": ""sales_forecast_predictor"",
+        ""tool_description"": ""Predicts sales forecasts based on historical data and current trends."",
+        ""arguments"": [
+            {""name"": ""historical_sales_data"", ""description"": ""Historical sales data"", ""type"": ""array of objects""},
+            {""name"": ""forecast_period"", ""description"": ""Time period for the sales forecast"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""deployment_automation_manager"",
+        ""tool_description"": ""Automates and manages the software deployment process."",
+        ""arguments"": [
+            {""name"": ""deployment_scripts"", ""description"": ""Scripts for automating deployment"", ""type"": ""array of strings""},
+            {""name"": ""environment"", ""description"": ""Deployment environment"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""customer_journey_mapper"",
+        ""tool_description"": ""Maps customer journeys to understand and improve customer experience."",
+        ""arguments"": [
+            {""name"": ""customer_data"", ""description"": ""Data about customers and their interactions"", ""type"": ""array of objects""},
+            {""name"": ""journey_stages"", ""description"": ""Stages in the customer journey to map"", ""type"": ""array of strings""}
+        ]
+    }"
+"{
+        ""tool_name"": ""risk_assessment_analyzer"",
+        ""tool_description"": ""Assesses and categorizes risks associated with different projects."",
+        ""arguments"": [
+            {""name"": ""project_risks"", ""description"": ""Data about potential risks in projects"", ""type"": ""array of objects""},
+            {""name"": ""risk_tolerance"", ""description"": ""Level of risk tolerance"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""market_trend_analyzer"",
+        ""tool_description"": ""Analyzes market trends to inform strategic decisions."",
+        ""arguments"": [
+            {""name"": ""market_data"", ""description"": ""Data about current market trends"", ""type"": ""array of objects""},
+            {""name"": ""industry_focus"", ""description"": ""Specific industry to focus the analysis on"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""update_work_item_status"",
+        ""tool_description"": ""Updates the status of a specific work item"",
+        ""arguments"": [
+            {""name"": ""work_id"", ""description"": ""The ID of the work item to be updated"", ""type"": ""string""},
+            {""name"": ""status"", ""description"": ""The new status of the work item"", ""type"": ""string""}
+        ]
+    }"
+"{
+        ""tool_name"": ""get_user_permissions"",
+        ""tool_description"": ""Returns the permissions of a specific user"",
+        ""arguments"": [
+            {""name"": ""user_id"", ""description"": ""The ID of the user for which you want to retrieve permissions"", ""type"": ""string""},
+            {""name"": ""scope"", ""description"": ""The scope for which the permissions are to be retrieved"", ""type"": ""string""},
+            {""name"": ""role"", ""description"": ""The role for which the permissions are to be retrieved"", ""type"": ""string""},
+            {""name"": ""resource"", ""description"": ""The resource for which the permissions are to be retrieved"", ""type"": ""string""}
+        ]
+    }"
