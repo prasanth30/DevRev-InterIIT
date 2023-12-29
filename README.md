@@ -27,7 +27,7 @@ general code for fine tuning models
 ### gpt_3_5_fine_tuning.py 
 specific code for gpt 3.5 finetuning
 ### Metric_Created.py 
-code for metric 
+code for metric  
 ### Final_Pipeline.py 
 final pipeline compiling all above codes
 ### Inference.py 
