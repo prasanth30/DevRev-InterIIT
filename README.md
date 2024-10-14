@@ -1,6 +1,6 @@
 # AI Agent 007 :Tooling for success
 The project aims to enhance the capabilities of Large Language Models by enabling them to generate a specific set of tools in response to a given query or task. 
-This challenge was presented as a problem statement during the DevRev at Inter IIT Tech Meet 12.0.
+
 
 ## Problem Statement 
 A Language model L has a set of tools T, and a user query Q is given. To answer query Q, we
